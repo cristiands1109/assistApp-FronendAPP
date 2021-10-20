@@ -1,0 +1,36 @@
+<ion-header class="ion-no-border" mode="md">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title style="padding: 0px;">Historial de denuncias</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <div>
+            <div class="item_div" *ngFor="let emergencia of emergenciasByUser" (click)="goToOrderDetail(emergencia.emergenciaID)">
+                <div class="flex_div">
+                    <div class="light_div" *ngIf="emergencia.tipo_emergencia.descripcion ==='ACCIDENTE'">
+                        <img src="assets/imgs/ambulance.png">
+                    </div>
+                    <div class="light_div" *ngIf="emergencia.tipo_emergencia.descripcion ==='INCENDIO'">
+                        <img src="assets/imgs/firee.png">
+                    </div>
+                    <div class="light_div" *ngIf="emergencia.tipo_emergencia.descripcion ==='EMERGENCIA MEDICA'">
+                        <img src="assets/imgs/crosss.png">
+                    </div>
+                    <div class="tab_detail">
+                        <ion-label class="bold_lbl">{{emergencia.tipo_emergencia.descripcion}}</ion-label>
+                        <ion-label class="grey_lbl">{{emergencia.direccion}}</ion-label>
+                    </div>
+                    <ion-label *ngIf="emergencia.emitido" class="price text danger">EMITIDO</ion-label>
+                </div>
+                <ion-label class="remove_lbl">Ver detalles</ion-label>
+            </div>
+        </div>
+
+        
+    </div>
+</ion-content>

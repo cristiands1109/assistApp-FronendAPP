@@ -1,0 +1,46 @@
+<ion-header class="ion-no-border" mode="md">
+    <ion-toolbar>
+        <ion-button (click)="goBack()" fill="clear" size="small" slot="start">
+            <ion-icon name="chevron-back" style="font-size: 24px;"></ion-icon>
+        </ion-button>
+        <ion-title style="padding: 0px;">Pharmacy</ion-title>
+        <ion-button fill="clear" slot="end" (click)="goToCart()">
+            <ion-icon name="cart-outline"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="extra_header">
+        <ion-input type="text" placeholder="What are you looking to buy ?" [(ngModel)]="searchTerm" (ionChange)="onSearch($event)"></ion-input>
+    </div>
+    <div class="main_content_div">
+
+        <div *ngIf="searchTerm == ''">
+            <img src="assets/imgs/pills.png" class="doc">
+            <ion-label class="bold_lbl">Search Medicine</ion-label>
+            <ion-label class="small_lbl">
+              Search for the medicines that you want from the list of thousands of medicines available in pharmacies near you.
+            </ion-label>
+        </div>
+        
+        <div class="card_div" *ngFor="let item of medicines">
+          <div class="flex_div">
+              <div class="light_div">
+                <img src="assets/imgs/pills.png">
+              </div>
+              <div class="tab_detail">
+                  <ion-label class="grey_lbl">Glexo Smithkline Consumer HC</ion-label>
+                  <ion-label class="name_lbl">{{item.name}}</ion-label>
+                  <ion-label class="grey_lbl">15 tablets in stripe</ion-label>
+                  <div class="price_flex">
+                      <ion-label class="price">₹ {{item.price}}</ion-label>
+                      <ion-label class="cart_lbl">Add to Cart</ion-label>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+    </div>
+
+</ion-content>

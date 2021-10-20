@@ -1,0 +1,68 @@
+<ion-header class="ion-no-border" mode="md">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <!-- <ion-button slot="end" size="small" fill="clear">
+            <ion-icon name="locate"></ion-icon>
+            Bhavnagar
+        </ion-button> -->
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="extra_header">
+            <div class="flex_div">
+                <div>
+                    <img src="assets/imgs/logov2.png" class="logo">
+                    <ion-label class="logo_text">ASSIST<span>APP</span></ion-label>
+                    <ion-label class="small_text">
+                        Innovando al servicio de la comunidad
+                    </ion-label>
+                </div>
+                <div>
+                    <img src="assets/imgs/medical-app.png">
+                </div>
+            </div>
+            <ion-input type="text" placeholder="Search for medicine and Doctors..">
+                <ion-icon name="search"></ion-icon>
+            </ion-input>
+        </div>
+        
+        <div class="content_div">
+            <div class="grid_box">
+                <div class="box_div" (click)="goToReminders('accidente')">
+                    <img src="assets/imgs/ambulance.png">
+                    <ion-label>Accidentes</ion-label>
+                </div>
+            </div>
+
+            <div class="grid_box">
+                <div class="box_div" (click)="goToReminders('incendio')">
+                    <img src="assets/imgs/firee.png">
+                    <ion-label>Incendios</ion-label>
+                </div>
+            </div>
+            <div class="grid_box">
+                <div class="box_div" (click)="goToReminders('emergencia medica')">
+                    <img src="assets/imgs/crosss.png">
+                    <ion-label>Emergencias</ion-label>
+                </div>
+            </div>
+
+            <!-- <ion-label class="title_lbl">Find Doctors in top Specialities</ion-label>
+            <div class="flex_slider">
+                <div *ngFor="let item of doctors" class="inner_slide" (click)="goToDoctorList()">
+                    <img src="assets/imgs/doc.png">
+                    <ion-label>{{item}}</ion-label>
+                </div>
+            </div> -->
+
+        </div>
+
+        
+
+    </div>
+</ion-content>

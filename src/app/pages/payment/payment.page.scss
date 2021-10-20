@@ -1,0 +1,166 @@
+// ion-toolbar {
+//     --background: var(--ion-color-app-light);
+ 
+//     ion-title {
+//         color: var(--ion-color-primary);
+//         font-family: 'semi-bold' !important;
+//         font-size: 14px;
+//     }
+// }
+
+.main_content_div {
+    padding: 16px;
+
+    ion-label {
+        display: block;
+    }
+
+    .stepper_div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px;
+        .round_div {
+            height: 15px;
+            width: 15px;
+            min-width: 15px;
+            border-radius: 50%;
+            border: 1px solid var(--ion-color-primary);
+        }
+        .completed {
+            background: var(--ion-color-primary);
+        }
+        .line_div {
+            height: 3px;
+            width: 100%;
+            background: var(--ion-color-app-light);
+        }
+    }
+
+    .name_lbl {
+        font-size: 16px;
+        text-align: center;
+        font-family: 'semi-bold';
+    }
+    .spec_lbl {
+        font-size: 14px;
+        color: grey;
+        font-family: 'medium';
+        text-align: center;
+    }
+
+    .border_div {
+        border-top: 1px solid lightgrey;
+        width: 200px;
+        margin: auto;
+        margin-top: 10px;
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
+    .date_lbl{
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .green_name {
+        font-family: 'semi-bold';
+        color: var(--ion-color-primary);
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    ion-input, ion-datetime {
+        border: 1px solid lightgrey;
+        border-radius: 25px;
+        --padding-start: 16px;
+        --padding-end: 16px;
+        margin-bottom: 16px;
+        height: 50px;
+    }
+
+    .price_btn {
+        text-align: center;
+        font-size: 24px;
+        font-family: 'semi-bold';
+        color: var(--ion-color-primary);
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .card_box {
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        position: relative;
+        height: 45px;
+        margin-bottom: 16px;
+        margin-top: 23px;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 50px;
+        }
+    }
+    .check_flex {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+        margin-bottom: 20px;
+
+        ion-checkbox{
+            --border-color : lightgrey;
+            --border-width: 2px;
+        }
+
+        ion-label {
+            margin-left: 10px;
+            color: var(--ion-color-primary);
+            font-size: 12px;
+            font-family: 'semi-bold';
+        }
+    }
+
+    .app_detail {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        img {
+            width: 100px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .bold_lbl {
+            font-family: 'bold';
+            font-size: 14px;
+        }
+        .grey_lbl {
+            color: gray;
+            font-size: 14px;
+            text-align: center;
+        }
+        .border_div2 {
+            width: 300px;
+            border-top: 1px solid lightgrey;
+            margin-top: 20px;
+            padding-top: 20px;
+            margin-bottom: 20px;
+
+            .grey_lbl {
+                color: gray;
+                font-size: 14px;
+                text-align: center !important;
+            }
+            .bold_lbl {
+                font-family: 'semi-bold';
+                font-size: 14px;
+                text-align: center !important;
+            }
+        }
+
+        ion-button{
+            width: 100%;
+        }
+    }
+}

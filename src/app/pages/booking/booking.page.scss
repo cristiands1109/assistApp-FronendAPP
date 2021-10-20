@@ -1,0 +1,112 @@
+.main_content_div {
+    width: 100%;
+
+    ion-label {
+        display: block;
+    }
+
+    .gradient_div {
+        background: linear-gradient(to right, #28AD9C, #18655D);
+        padding: 16px;
+        margin-bottom: 20px;
+
+        .header_flex {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            ion-icon {
+                color: white;
+                font-size: 24px;
+                position: absolute;
+                left: 0;
+            }
+
+            ion-label {
+                font-family: 'semi-bold';
+                color: white;
+            }
+        }
+
+        .cal_header{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 30px;
+
+            ion-button {
+                --background: transparent;
+                margin: 0;
+
+                ion-icon {
+                    color: white !important;
+                }
+            }
+
+            ion-label {
+                color: white;
+                font-size: 14px;
+                font-family: 'semi-bold';
+            }
+        }
+
+        .time_div {
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+            ion-label {
+                font-size: 14px;
+                font-family: 'semi-bold';
+                text-align: center;
+                color: white;
+            }
+
+            .time_slider {
+                display: flex;
+                overflow: scroll;
+                margin-top: 10px;
+                ion-label {
+                    margin-right: 10px;
+                    margin-left: 10px;
+                    white-space: nowrap;
+                    font-size: 16px;
+                    color: #2FB8A8;
+                }
+
+                .activeTime {
+                    font-size: 18px;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .bottom_div {
+        padding: 16px;
+
+        .name_lbl {
+            font-size: 16px;
+            text-align: center;
+            margin-top: 20px;
+            font-family: 'semi-bold';
+        }
+        .spec_lbl {
+            font-size: 14px;
+            color: grey;
+            font-family: 'medium';
+            text-align: center;
+        }
+        .doc_detail {
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+            align-items: center;
+    
+            ion-label {
+                font-family: 'semi-bold';
+                font-size: 14px;
+            }
+        }
+    }
+}

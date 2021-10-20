@@ -1,0 +1,59 @@
+<ion-header class="ion-no-border" mode="md">
+    <ion-toolbar>
+        <ion-button (click)="goBack()" fill="clear" size="small" slot="start">
+            <ion-icon name="chevron-back" style="font-size: 24px;"></ion-icon>
+        </ion-button>
+        <ion-title *ngIf="isAddEdit == 'add'" style="padding: 0px;">Add Address</ion-title>
+        <ion-title *ngIf="isAddEdit == 'edit'" style="padding: 0px;">Edit Address</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="map"></div>
+    <div class="main_content_div">
+        <ion-label class="simple_lbl">Location</ion-label>
+        <ion-input type="text" placeholder="Enter Location"></ion-input>
+
+        <ion-label class="simple_lbl">House No / Flat No</ion-label>
+        <ion-input type="text" placeholder="House No / Flat No"></ion-input>
+
+        <ion-label class="simple_lbl">Landmark</ion-label>
+        <ion-input type="text" placeholder="Landmark"></ion-input>
+
+        <ion-label class="simple_lbl">Pincode</ion-label>
+        <ion-input type="text" placeholder="Pincode"></ion-input>
+
+        <ion-radio-group mode="md">
+            <ion-label class="title">
+                SAVE AS
+            </ion-label>
+
+            <ion-item style="margin-top: 20px;">
+                <ion-icon name="home-outline" slot="start"></ion-icon>
+                <ion-label>HOME</ion-label>
+                <ion-radio value="home"></ion-radio>
+            </ion-item>
+      
+            <ion-item>
+                <ion-icon name="briefcase-outline" slot="start"></ion-icon>
+                <ion-label>WORK</ion-label>
+                <ion-radio value="work"></ion-radio>
+            </ion-item>
+      
+            <ion-item>
+                <ion-icon name="navigate-outline" slot="start"></ion-icon>
+                <ion-label>OTHER</ion-label>
+                <ion-radio value="other"></ion-radio>
+            </ion-item>
+        </ion-radio-group>
+
+        <ion-button expand="block" shape="round" *ngIf="isAddEdit == 'add'" (click)="goBack()">
+            Add Address
+        </ion-button>
+
+        <ion-button expand="block" shape="round" *ngIf="isAddEdit == 'edit'" (click)="goBack()">
+            Edit Address
+        </ion-button>
+
+    </div>
+</ion-content>

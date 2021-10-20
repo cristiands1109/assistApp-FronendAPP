@@ -1,0 +1,129 @@
+<ion-header>
+    <ion-toolbar>
+        <div class="flex_header">
+            <ion-button (click)="goBack()" fill="clear" size="small" slot="start">
+                <ion-icon name="chevron-back" style="font-size: 24px;color: white;"></ion-icon>
+            </ion-button>
+            <ion-button slot="end" size="small" fill="clear" color="light">
+                <ion-icon name="locate"></ion-icon>
+                Bhavnagar
+            </ion-button>
+        </div>
+
+        <div class="custom_header">
+            <div class="round_div4">
+                <div class="round_div3">
+                    <div class="round_div2">
+                        <div class="round_div1">
+                          <div class="user_round" [style.backgroundImage]="'url(assets/imgs/user1.jpg)'"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ion-label class="name_lbl">Dr. Jonh Doe</ion-label>
+            <ion-label class="spec_lbl">General Physician</ion-label>
+
+            <div class="call_detail">
+                <div class="round_call">
+                    <ion-icon name="call"></ion-icon>
+                </div>
+                <div class="round_call">
+                    <ion-icon name="chatbox-ellipses"></ion-icon>
+                </div>
+            </div>
+
+            <div class="doc_detail">
+                <ion-label>₹ 200.00</ion-label>
+                <ion-label>10 yrs of exp</ion-label>
+                <div style="display: flex;align-items: center;">
+                    <ion-icon name="heart" style="color: red;margin-right: 5px;"></ion-icon>
+                    <ion-label>145</ion-label>
+                </div>
+            </div>
+
+        </div>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <ion-segment value="doctor" (ionChange)="segmentChanged($event)" mode="md">
+            <ion-segment-button value="doctor">
+                <ion-label>Doctor's Info</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="clinic">
+                <ion-label>Clinic's Info</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="feedback">
+                <ion-label>Feedback</ion-label>
+            </ion-segment-button>
+        </ion-segment>
+
+        <div class="content_div">
+
+            <div *ngIf="tabID == 'doctor'" class="doctor_div">
+                <ion-label class="bold_lbl">Education</ion-label>
+                <ul>
+                    <li>MD - General Medicine | College name here</li>
+                    <li>MBBS - Nephrology | More info</li>
+                </ul>
+                <ion-label class="bold_lbl">Specialization</ion-label>
+                <ul>
+                    <li>Consultation Physician</li>
+                    <li>Internal Medicine</li>
+                </ul>
+                <ion-label class="bold_lbl">Services Offred</ion-label>
+                <ul>
+                    <li>Peritoneal Dialysis</li>
+                    <li>Kidney Stone treatment</li>
+                </ul>
+                <ion-label class="service_lbl">View all Services</ion-label>
+
+            </div>
+
+            <div *ngIf="tabID == 'clinic'" class="clinic_div">
+                <div class="call_info">
+                    <ion-label class="contact_lbl">9876543212 | 9876543212</ion-label>
+                    <ion-label class="addr_lbl">1234, Eva surbhi complex, Aksharwadi road, bhavnagar - 364001</ion-label>
+                </div>
+                
+                <div class="map_div">
+                  <div #map id="map" class="map"></div>
+                </div>
+
+                <div class="clinic_gallery">
+                    <ion-grid fixed>
+                        <ion-row>
+                            <ion-col size="4" *ngFor="let item of images">
+                                <div class="image_div" [style.backgroundImage]="'url('+ item +')'"></div>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </div>
+
+            </div>
+
+            <div *ngIf="tabID == 'feedback'" class="feedback_div">
+                <div class="inner_feedback_div" *ngFor="let item of [1,2,3]">
+                    <ion-label class="gray_lbl">10 Days Ago</ion-label>
+                    <ion-label class="name_lbl">Verified User-{{item}}</ion-label>
+                    <ion-label class="feedback_lbl">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                      Ex rerum voluptas vel dolor est, corrupti ipsam facere ratione libero 
+                      voluptatem ab beatae cupiditate quisquam sed, illo aspernatur eius unde voluptate.
+                    </ion-label>
+                </div>
+            </div>
+
+            <div class="btn_div" (click)="goToBooking()">
+                <ion-button expand="block" shape="round">
+                  Book Appointment
+                </ion-button>
+            </div>
+
+        </div>
+
+    </div>
+</ion-content>

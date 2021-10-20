@@ -1,0 +1,121 @@
+// ion-toolbar {
+//     --background: var(--ion-color-app-light);
+ 
+//      ion-title {
+//          color: var(--ion-color-primary);
+//          font-family: 'semi-bold' !important;
+//          font-size: 14px;
+//      }
+ 
+//      ion-button{
+//          margin: 0;
+//          --background: transparent;
+//          font-family: 'semi-bold';
+         
+ 
+//          ion-icon {
+//              margin-right: 5px;
+//          }
+//      }
+// }
+
+.extra_header {
+    background: var(--ion-color-app-light);
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-top: 25px !important;
+    position: relative;
+
+    ion-input {
+        box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+        border-radius: 25px;
+        --padding-start: 16px;
+        --padding-end: 16px;
+        background: white;
+        position: absolute;
+        width: 90%;
+        height: 50px;
+        top: 0%;
+    }
+}
+
+.main_content_div {
+    padding: 16px;
+    margin-top: 40px;
+
+    .doc {
+        width: 70px;
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .bold_lbl {
+        font-family: 'bold';
+        text-align: center;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+    .small_lbl {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .card_div {
+        padding: 10px;
+        box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+        margin-bottom: 20px;
+
+        .flex_div {
+            display: flex;
+            position: relative;
+
+            .light_div {
+                height: 40px;
+                width: 40px;
+                min-width: 40px;
+                border-radius: 50%;
+                background: var(--ion-color-app-light);
+                position: relative;
+
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    width: 18px;
+                }
+            }
+            .tab_detail {
+                padding-left: 16px;
+                width: 100%;
+
+                .name_lbl {
+                    font-size: 18px;
+                    font-family: 'medium';
+                }
+                .grey_lbl {
+                    font-size: 12px;
+                    color: grey;
+                }
+
+                .price_flex {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 10px;
+
+                    .price {
+                        font-family: 'semi-bold';
+                        font-size: 14px;
+                    }
+                    .cart_lbl {
+                        font-family: 'semi-bold';
+                        font-size: 14px;
+                        color: var(--ion-color-primary);
+                    }
+                }
+            }
+        }
+    }
+}

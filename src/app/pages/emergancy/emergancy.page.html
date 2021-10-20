@@ -1,0 +1,28 @@
+<ion-header class="ion-no-border" mode="md">
+    <ion-toolbar>
+        <ion-button (click)="goBack()" fill="clear" size="small" slot="start">
+            <ion-icon name="chevron-back" style="font-size: 24px;"></ion-icon>
+        </ion-button>
+        <ion-title style="padding: 0px;">Emergancy</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="location_card">
+            <ion-label class="title_lbl">Your Location</ion-label>
+            <ion-label class="addr_lbl">1234, Hilldrive, Aksharwadi road, Bhavnagar - 364001</ion-label>
+            <ion-button shape="round" (click)="goToCurrentLocation()">
+                Change Location
+            </ion-button>
+        </div>
+
+        <img src="assets/imgs/ambulance.png">
+        <ion-label class="bold_lbl">Call Ambulance</ion-label>
+        <ion-label class="small_lbl">Incase of emergancy just press the call Ambulabce button to alert the nearby Ambulance to arrive at your location</ion-label>
+        <ion-button expand="block" shape="round" class="red_btn" (click)="goToGetAmbulance()">
+            Call Ambulance 
+        </ion-button>
+    </div>
+</ion-content>

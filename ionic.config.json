@@ -1,0 +1,8 @@
+{
+  "name": "medicalApp",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

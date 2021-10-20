@@ -1,0 +1,87 @@
+// ion-toolbar {
+//     --background: var(--ion-color-app-light);
+ 
+//     ion-title {
+//         color: var(--ion-color-primary);
+//         font-family: 'semi-bold' !important;
+//         font-size: 14px;
+//     }
+// }
+.main_content_div {
+    padding: 16px;
+
+    .green_name {
+        font-family: 'semi-bold';
+        color: var(--ion-color-primary);
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    ion-input, ion-select{
+        border: 1px solid lightgrey;
+        border-radius: 25px;
+        --padding-start: 16px;
+        --padding-end: 16px;
+        margin-bottom: 16px;
+        height: 50px;
+
+        ion-icon {
+            margin: 0px;
+        }
+    }
+
+    .date_div {
+        border: 1px solid lightgrey;
+        border-radius: 25px;
+        margin-bottom: 16px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 16px;
+        padding-right: 16px;
+        align-items: center;
+
+        ion-datetime {
+            padding: 0px;
+        }
+
+        ion-icon {
+            font-size: 20px;
+            color: var(--ion-color-primary);
+        }
+    }
+
+    .time_slots {
+        display: flex;
+        flex-wrap: wrap;
+
+        ion-datetime {
+            border: 1px solid lightgrey;
+            border-radius: 25px;
+            height: 50px;
+            margin-bottom: 16px;
+            margin-right: 10px;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .add_btn {
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            background: linear-gradient(to right, #28AD9C, #18655D);
+            position: relative;
+            margin-right: 16px;
+            margin-bottom: 16px;
+    
+            ion-icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                color: white;
+                font-size: 25px;
+            }
+        }
+
+    }
+}

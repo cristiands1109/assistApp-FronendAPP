@@ -1,0 +1,35 @@
+<ion-header class="ion-no-border" mode="md">
+  <ion-toolbar>
+        <ion-button (click)="goBack()" fill="clear" size="small" slot="start">
+            <ion-icon name="chevron-back" style="font-size: 24px;"></ion-icon>
+        </ion-button>
+      <ion-title>Detalle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-spinner name="bubbles" *ngIf="!emergenciaCargada" ></ion-spinner>
+    <div class="main_content_div" *ngIf="emergenciaCargada">
+        <div class="card_box">
+            <ion-label class="green_lbl">ID Emergencia</ion-label>
+            <div class="flex_div">
+                <ion-label class="simple_lbl">{{emergenciaSeleccionada.emergenciaID}}</ion-label>
+            </div>
+        </div>
+        <div class="card_box">
+            <ion-label class="green_lbl">Tipo Emergencia</ion-label>
+            <ion-label class="bold_lbl">{{emergenciaSeleccionada.tipo_emergencia.descripcion}}</ion-label>
+        </div>
+        <div class="card_box">
+          <ion-label class="green_lbl">Datos denuncia</ion-label>
+          <ion-label class="bold_lbl">{{emergenciaSeleccionada.relatoria}}</ion-label>
+          <ion-label class="simple_lbl">{{emergenciaSeleccionada.direccion}}</ion-label>
+        </div>
+        
+        <div class="card_box" *ngIf="emergenciaSeleccionada.img">
+            <ion-label class="green_lbl">Imagen</ion-label>
+            <img [src]="emergenciaSeleccionada.img">
+        </div>
+
+    </div>
+</ion-content>

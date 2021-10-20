@@ -1,0 +1,33 @@
+<ion-header class="ion-no-border" mode="md">
+    <ion-toolbar>
+        <ion-button (click)="goBack()" fill="clear" size="small" slot="start">
+            <ion-icon name="chevron-back" style="font-size: 24px;"></ion-icon>
+        </ion-button>
+        <ion-title style="padding: 0px;">Doctors</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="extra_header">
+        <ion-input type="text" placeholder="Search for doctors, specialist, clinics, hospitals.."></ion-input>
+    </div>
+    <div class="main_content_div">
+        <img src="assets/imgs/stethoscope.png" class="doc">
+        <ion-label class="bold_lbl">Search Doctors</ion-label>
+        <ion-label class="small_lbl">
+          Search by directly typing the doctors name, speciality, symptopms, clinics, hospital, etc. 
+          You can also search by health concerns listed below
+        </ion-label>
+
+        <ion-grid fixed>
+            <ion-row>
+                <ion-col size="6" *ngFor="let item of doctors" (click)="goToDoctorList()">
+                    <div class="light_div">
+                        <ion-label>{{item}}</ion-label>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+    </div>
+</ion-content>

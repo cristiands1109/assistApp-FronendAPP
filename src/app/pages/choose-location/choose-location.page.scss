@@ -1,0 +1,74 @@
+// ion-toolbar {
+//     --background: var(--ion-color-app-light);
+// }
+ion-content {
+    --background: var(--ion-color-app-light);
+}
+.main_content_div {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    // height: 100%;
+
+    .logo {
+        width: 70px;
+        margin-top: 40px;
+    }
+
+    .logo_text {
+        font-size: 18px;
+        font-family: 'bold';
+        margin-top: 5px;
+
+        span{
+            font-family: 'semi-bold';
+            color: var(--ion-color-primary);
+        }
+    }
+
+    .bold_lbl {
+        font-size: 22px;
+        font-family: 'semi-bold';
+        margin-top: 60px;
+    }
+
+    .small_lbl {
+        font-size: 14px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .input_div {
+        background: white;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-radius: 25px;
+        border: 1px solid lightgrey;
+        height: 50px;
+        margin-bottom: 16px;
+    
+        ion-input {
+            border-radius: 5px;
+            height: 50px;
+            --padding-start: 16px;
+            --padding-end: 16px;
+            font-family: 'regular';
+        }
+    
+        ion-icon{
+            color: var(--ion-color-primary);
+            margin-right: 16px;
+            font-size: 18px;
+        }
+    }
+
+    .gredient_btn {
+        width: 100%;
+        margin: 0;
+    }
+}

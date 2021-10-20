@@ -1,0 +1,67 @@
+<ion-header class="ion-no-border" mode="md">
+    <ion-toolbar>
+        <ion-button (click)="goBack()" fill="clear" size="small" slot="start">
+            <ion-icon name="chevron-back" style="font-size: 24px;"></ion-icon>
+        </ion-button>
+        <ion-select value="General Doctor" style="padding: 0px;">
+            <ion-select-option value="{{item}}" *ngFor="let item of doctors">
+                {{item}}
+            </ion-select-option>
+        </ion-select>
+        <ion-button slot="end" size="small" fill="clear">
+            <ion-icon name="locate"></ion-icon>
+            Bhavnagar
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="extra_header">
+        <div class="opt_btn">
+            <ion-icon name="options"></ion-icon>
+        </div>
+    </div>
+    <div class="main_content_div">
+        <ion-label class="title_lbl">Results showing General Doctors</ion-label>
+        
+        <div class="card_div" *ngFor="let item of [1,2,3,4,5]">
+
+            <div class="user_flex">
+
+                <div class="user_back" [style.backgroundImage]="'url(assets/imgs/user1.jpg)'"></div>  
+                <div class="user_detail">
+                    <ion-label class="name">Dr. Jonh Doe</ion-label>
+                    <ion-label class="sub_lbl">General Physician</ion-label>
+                    <ion-label class="grey_lbl">Lorem ipsum dolor sit amet</ion-label>
+                    <ion-icon name="share-social" class="share_icn"></ion-icon>
+
+                    <div class="flex_div">
+                        <ion-label>₹ 60.00</ion-label>
+                        <ion-label>10 yrs of exp.</ion-label>
+                        <div class="like_flex">
+                            <ion-icon name="heart"></ion-icon>
+                            <ion-label>130</ion-label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <ion-label class="view_lbl">VIEW PROFILE</ion-label>
+            <ion-row>
+                <ion-col size="6" style="padding-left: 0px;">
+                    <ion-button expand="block" fill="outline" shape="round" class="call_btn">
+                      Call
+                    </ion-button>
+                </ion-col>
+                <ion-col size="6" style="padding-right: 0px;">
+                    <ion-button expand="block" shape="round" class="book_btn" (click)="goToDoctorDetail()">
+                      Book
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+
+        </div>
+
+    </div>
+</ion-content>

@@ -1,0 +1,115 @@
+<ion-header class="ion-no-border" mode="md">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title style="padding: 0px;">Mi perfil</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form #editarForm="ngForm" (ngSubmit)="onEditarForm(editarForm)">
+    <div class="main_content_div" *ngIf="userdata">
+          <div class="user_back">
+            <ion-icon name="person"></ion-icon>
+        </div>
+          <div class="detail_div">
+              <div class="light_box">
+                  <ion-icon name="call"></ion-icon>
+              </div>
+                <ion-input 
+                    type="text"
+                    name="celular" 
+                    placeholder="celular" 
+                    [(ngModel)]="userdata.celular" 
+                    [disabled]="changePhone == false">
+                </ion-input>
+          </div>
+          <div class="detail_div">
+              <div class="light_box">
+                  <ion-icon name="person"></ion-icon>
+              </div>
+                <ion-input 
+                    type="text" 
+                    placeholder="name"
+                    name="nombre" 
+                    [(ngModel)]="userdata.nombre" 
+                    [disabled]="changeName == false">
+                </ion-input>
+              <ion-label class="abs_lbl" *ngIf="changeName == false" (click)="changeName = true">editar</ion-label>
+              <ion-label class="change_lbl" *ngIf="changeName == true" (click)="changeName = false">cambiar</ion-label>
+          </div>
+          <div class="detail_div">
+              <div class="light_box">
+                  <ion-icon name="person"></ion-icon>
+              </div>
+                <ion-input 
+                    type="text"
+                    name="apellido" 
+                    placeholder="name" 
+                    [(ngModel)]="userdata.apellido" 
+                    [disabled]="changeApellido == false" >
+                </ion-input>
+              <ion-label class="abs_lbl" *ngIf="changeApellido == false" (click)="changeApellido = true">editar</ion-label>
+              <ion-label class="change_lbl" *ngIf="changeApellido == true" (click)="changeApellido = false">cambiar</ion-label>
+          </div>
+        
+          <div class="detail_div">
+              <div class="light_box">
+                  <ion-icon name="map"></ion-icon>
+              </div>
+              <ion-item>
+                <ion-label>Departamento</ion-label>
+                <ion-select name="departamento" 
+                            interface="alert"
+                            [disabled]="changeDepartamento == false" 
+                            [(ngModel)]="userdata.departamento" 
+                            (ionChange)="obtenerDepartamento($event)" 
+                            okText="Seleccionar" 
+                            cancelText="Volver">
+                    <div *ngFor="let dep of departamento" >
+                        <ion-select-option 
+                            [value]="dep.departamentoID">
+                            {{dep.descripcion}}
+                        </ion-select-option>
+                    </div>
+                </ion-select>
+              </ion-item>
+              <ion-label class="abs_lbl" *ngIf="changeDepartamento == false" (click)="changeDepartamento = true">editar</ion-label>
+              <ion-label class="change_lbl" *ngIf="changeDepartamento == true" (click)="changeDepartamento = false">Cambiar</ion-label>
+          </div>
+          <div class="detail_div">
+              <div class="light_box">
+                  <ion-icon name="map"></ion-icon>
+              </div>
+              <ion-item>
+                <ion-label>Ciudad</ion-label>
+                <ion-select name="ciudad"
+                            interface="alert"
+                            [disabled]="changeCiudad == false"  
+                            [(ngModel)]="userdata.ciudad"  
+                            (ionChange)="ciudadSeleccionada($event)" 
+                            okText="Seleccionar" 
+                            cancelText="Volver">
+                    <div *ngFor="let ciudad of ciudades" >
+                        <ion-select-option 
+                            [value]="ciudad.ciudadID">
+                            {{ciudad.descripcion}}
+                        </ion-select-option>
+                    </div>
+                </ion-select>
+              </ion-item>
+              <ion-label class="abs_lbl" *ngIf="changeCiudad == false" (click)="changeCiudad = true">editar</ion-label>
+              <ion-label class="change_lbl" *ngIf="changeCiudad == true" (click)="changeCiudad = false">cambiar</ion-label>
+         </div>
+            
+         <ion-button 
+                        expand="block"
+                        shape="round"
+                        class="gredient_btn" 
+                        type="submit">
+                Editar
+            </ion-button>
+    </div>
+    </form>
+</ion-content>

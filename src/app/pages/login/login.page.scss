@@ -1,0 +1,72 @@
+ion-content {
+    --background: var(--ion-color-app-light);
+}
+
+.main_content_div {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    .logo {
+        width: 70px;
+        margin-top: 40px;
+    }
+
+    .logo_text {
+        font-size: 18px;
+        font-family: 'bold';
+        margin-top: 5px;
+
+        span{
+            font-family: 'semi-bold';
+            color: var(--ion-color-primary);
+        }
+    }
+
+    .bold_lbl {
+        font-size: 22px;
+        font-family: 'semi-bold';
+        margin-top: 60px;
+    }
+
+    .small_lbl {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .gredient_btn {
+        // --background: linear-gradient(to right, #28AD9C, #18655D);
+        width: 100%;
+        margin: 0;
+    }
+
+    .or_lbl {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .facebook_btn {
+        --background: linear-gradient(to right, #395692, #203665);
+        width: 100%;
+        margin: 0px;
+    }
+
+    .green_lbl {
+        color: var(--ion-color-primary);
+        font-size: 13px;
+        margin-top: 16px;
+    }
+
+    .term_lbl {
+        font-size: 12px;
+        position: absolute;
+        bottom: 30px;
+
+        span {
+            color: var(--ion-color-primary);
+        }
+    }
+}

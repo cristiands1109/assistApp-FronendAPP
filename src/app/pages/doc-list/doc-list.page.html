@@ -1,0 +1,43 @@
+<ion-header class="ion-no-border" mode="md">
+  <ion-toolbar>
+      <ion-button (click)="goBack()" fill="clear" size="small" slot="start">
+        <ion-icon name="chevron-back" style="font-size: 24px;"></ion-icon>
+      </ion-button>
+      <ion-title style="padding: 0px;">Documents List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+      <div class="detail_div">
+        <div class="light_box">
+          <ion-icon name="map"></ion-icon>
+        </div>
+        <ion-item>
+          <ion-label>Select</ion-label>
+          <ion-select>
+            <div *ngFor="let item of [1,2,3,4,5]; let i = index">
+              <ion-select-option value="brown">Brown</ion-select-option>
+              <!-- <ion-select-option value="blonde">Blonde</ion-select-option>
+              <ion-select-option value="black">Black</ion-select-option>
+              <ion-select-option value="red">Red</ion-select-option> -->
+            </div>
+          </ion-select>
+        </ion-item>
+      </div>
+      <!-- <div class="item_div" *ngFor="let item of [1,2,3,4,5]; let i = index">
+          <div class="flex_div">
+              <div class="light_div">
+                  <ion-icon name="document-text"></ion-icon>
+              </div>
+              <div class="tab_detail">
+                  <ion-label class="bold_lbl">Document {{i+1}}</ion-label>
+                  <ion-label class="grey_lbl">2nd June 2020</ion-label>
+              </div>
+              <ion-label class="remove_lbl">Remove</ion-label>
+          </div>
+      </div> -->
+      
+    </div>
+
+</ion-content>

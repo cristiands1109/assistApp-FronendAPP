@@ -1,0 +1,108 @@
+<ion-header class="ion-no-border" mode="md">
+    <ion-toolbar>
+        <ion-button (click)="goBack()" fill="clear" size="small" slot="start">
+            <ion-icon name="chevron-back" style="font-size: 24px;"></ion-icon>
+        </ion-button>
+        <ion-title style="padding: 0px;">Payment</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="stepper_div">
+            <div class="round_div" [class.completed]=" tabID >=1 "></div>
+            <div class="line_div"></div>
+            <div class="round_div" [class.completed]=" tabID >=2 "></div>
+            <div class="line_div"></div>
+            <div class="round_div" [class.completed]=" tabID >=3 "></div>
+        </div>
+        <!-- <div>
+            <ion-label>SHIPPING</ion-label>
+            <ion-label>PAYMENT</ion-label>
+            <ion-label>CONFORMATION</ion-label>
+        </div> -->
+
+        <div *ngIf="tabID == 1">
+            <ion-label class="name_lbl">Dr. Jonh Doe</ion-label>
+            <ion-label class="spec_lbl">General Physician</ion-label>
+            <ion-label class="spec_lbl">HSR layout, Bangalore</ion-label>
+    
+            <div class="border_div">
+                <ion-label class="date_lbl">4th Feb 2020, 11.30 am</ion-label>
+            </div>
+    
+            <ion-label class="green_name">Your Name</ion-label>
+            <ion-input type="text" placeholder="Your Name"></ion-input>
+            <ion-label class="green_name">Reason for Visit</ion-label>
+            <ion-input type="text" placeholder="Reason for Visit"></ion-input>
+            <ion-label class="green_name">Patient Name</ion-label>
+            <ion-input type="text" placeholder="Patient Name"></ion-input>
+    
+            <div class="check_flex">
+                <ion-checkbox mode="md"></ion-checkbox>
+                <ion-label>I have visited this Doctor before</ion-label>
+            </div>
+    
+            <ion-button expand="block" shape="round" (click)="tabID = 2">
+              Next
+            </ion-button>
+        </div>
+
+        <div *ngIf="tabID == 2">
+
+            <ion-label class="price_btn">₹ 200.00</ion-label>
+
+            <ion-row>
+                <ion-col size="9" style="padding: 0">
+                    <ion-label class="green_name">CARD NUMBER</ion-label>
+                    <ion-input type="text" placeholder="XXXX-XXXX-XXXX-4242"></ion-input>
+                </ion-col>
+                <ion-col size="3">
+                    <div class="card_box">
+                        <img src="assets/imgs/visa.png">
+                    </div>
+                </ion-col>
+                <ion-col size="12" style="padding: 0">
+                    <ion-label class="green_name">CARDHOLDER NAME</ion-label>
+                    <ion-input type="text" placeholder="Your Name"></ion-input>
+                </ion-col>
+                <ion-col size="6" style="padding-left: 0">
+                    <ion-label class="green_name">EXPIRE DATE</ion-label>
+                    <ion-datetime display-format="MM/YYYY" placeholder="MM/YYYY"></ion-datetime>
+                </ion-col>
+                <ion-col size="6" style="padding-right: 0">
+                  <ion-label class="green_name">CVV</ion-label>
+                  <ion-input type="text" placeholder="***"></ion-input>
+                </ion-col>
+            </ion-row>
+
+            <div class="check_flex">
+                <ion-checkbox mode="md"></ion-checkbox>
+                <ion-label>SAVE CARD</ion-label>
+            </div>
+
+            <ion-button expand="block" shape="round" (click)="tabID = 3">
+              Pay Securely
+            </ion-button>
+        </div>
+
+        <div *ngIf="tabID == 3" class="app_detail">
+            <img src="assets/imgs/secure.png">
+            <ion-label class="bold_lbl">APPOINTMENT CONFIRM</ion-label>
+            <ion-label class="grey_lbl">Your appointment with Dr. Jonh Doe on 4th February 2019 at 11:30 AM is confirm.</ion-label>
+
+            <div class="border_div2">
+                <ion-label class="grey_lbl">Time left before appoinment.</ion-label>
+                <ion-label class="bold_lbl">2 Days 4 hours</ion-label>
+            </div>
+            
+
+            <ion-button expand="block" shape="round" (click)="goToTabs()">
+                Set Reminder
+            </ion-button>
+        </div>
+
+        
+    </div>
+</ion-content>
